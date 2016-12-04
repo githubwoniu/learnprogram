@@ -26,22 +26,37 @@
 
 欢迎大家转发邀请卡，邀请好友一起学习，一起进步。
 
-具体的GitHub操作如下：
+### 具体的GitHub操作如下
 
-## 1. Fork
+#### 1. Fork
 
 https://github.com/githubwoniu/learnprogram
 
-## 2. 创建一个新文件
+#### 2. 创建一个新文件
 
-## 3. 添加解题笔记
+1. 进入自己的仓库  
+2. 进入目录learnprogram/leetcode/09/
+3. 点击Create New File
+4. 文件名可以是`note_用户名.md`的形式，如`note_githubwoniu.md`
 
-格式参考 note.md
+#### 3. 添加解题笔记
 
-## 4. Commit
+这次要解的题目是
 
-## 5. Pull Request
+[leetcode 09](https://leetcode.com/problems/palindrome-number/)
 
-# 公众号
+笔记格式参考 
+
+[note.md](https://github.com/githubwoniu/learnprogram/blob/master/leetcode/09/note.md)
+
+#### 4. Commit
+
+#### 5. Pull Request
+
+# 关注公众号
+
+一起学习吧~
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
+
+由于微信群二维码只有七天有效期，这里就不放了，请到公众号底部菜单栏查找。

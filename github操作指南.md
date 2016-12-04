@@ -96,38 +96,3 @@ Github支持上传不同格式的文件，只需要将本地文件拖动到指定窗口就可以了
 
 [怎样使用 GitHub](https://www.zhihu.com/question/20070065)，可以看下@珊姗是个小太阳 的回答，注意GitHub Desktop的安装需要能翻q
 
-# 参与百人刷题活动
-
-学习群里的小伙伴们经常问我，为什么工作四年之后还要学习C++。其实学习C++并不是我的最终目的，我是希望借助C++来系统的学习一下编程这门学科。
-
-100天C++学习计划只是我的第一步。
-
-截止到今天（20161204）已经是执行计划的第51天了，我的收获有：
-1. 完成了前6章和第8章
-2. 分享了30多篇读书笔记到知乎和个人公众号
-3. 坚持6点半起床，早起已经不会有任何的不适
-4. 知乎有1490个关注，公众号有248个关注，c++学习群刚好100人，这些都是学习上的陪伴，可以经常一起探讨问题，分享学习方法，相互监督。
-
-也是为了记念学习群满100人，和小伙伴们商量组织一个活动：百人刷leetcode大作战！！
-
-![](https://github.com/githubwoniu/learnprogram/blob/master/image/100leetcode.png)
-
-具体的GitHub操作如下：
-
-## 1. Fork
-
-https://github.com/githubwoniu/learnprogram
-
-## 2. 创建一个新文件
-
-## 3. 添加解题笔记
-
-格式参考 note.md
-
-## 4. Commit
-
-## 5. Pull Request
-
----
-
-![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
