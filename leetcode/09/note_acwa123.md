@@ -1,3 +1,4 @@
+```
 class Solution {
 public:
 	int pow_ten(int x)
@@ -29,3 +30,4 @@ public:
         return true;
     }
 };
+```
