@@ -9,7 +9,7 @@ public:
 		return s;
 	}
     bool isPalindrome(int x) {
-	if(x<0) return false;
+		if(x<0) return false;
         int n = 1;
         int xx=x;
         while(xx/10!=0)
