@@ -20,8 +20,10 @@ https://leetcode.com/problems/palindrome-number/
 ## 补充描述
 
 
-
-
+The second solution is a C++ version of Python 1 liner:
+```python
+return str(x).reverse == str(x)
+```
 
 
 ## 代码
@@ -44,6 +46,11 @@ public:
         x /= 10;
     }
     return temp == sum;
+    }
+    bool isPalindrome1(int x) {
+        string s1 = to_string(x), s2 = s1;
+        reverse(s1.begin(), s1.end());
+        return s1 == s2;
     }
 };
 
