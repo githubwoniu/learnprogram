@@ -1,4 +1,33 @@
-```
+## 链接
+
+
+https://leetcode.com/problems/palindrome-number/
+
+
+## 题目
+
+
+
+
+
+## 释义
+笨方法，没有各位的那么巧妙。
+## 补充描述
+
+
+
+
+
+
+## 代码
+
+
+
+
+
+
+```c++
+
 class Solution {
 public:
 	int pow_ten(int x)
@@ -30,4 +59,17 @@ public:
         return true;
     }
 };
+
+
+
+
 ```
+
+
+
+## 更多
+
+![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
+
+PS: 请保留二维码链接，以便更多人参与进来。谢谢。
+
