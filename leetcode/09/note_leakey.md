@@ -22,7 +22,7 @@ https://leetcode.com/problems/palindrome-number/
 
 The second solution is a C++ version of Python 1 liner:
 ```python
-return str(x).reverse == str(x)
+return str(x).reverse() == str(x)
 ```
 
 
