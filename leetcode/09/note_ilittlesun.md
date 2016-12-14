@@ -1,30 +1,30 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/palindrome-number/
 
 
-## ÌâÄ¿
+## é¢˜ç›®
 
 
 
 
 
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
+## é‡Šä¹‰
 
 
 
 
 
 
-## ´úÂë
+## è¡¥å……æè¿°
+
+
+
+
+
+
+## ä»£ç 
 
 
 
@@ -33,17 +33,17 @@ https://leetcode.com/problems/palindrome-number/
 
 ```c++
 
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
+//ä»£ç æ”¾åœ¨è¿™ä¸ªå—é‡Œé¢ï¼Œå¯ä»¥é«˜äº®å…³é”®å­—
 
-//´úÂëÒ»
+//ä»£ç ä¸€
 class Solution {
 public:
     bool isPalindrome(int x) {
         if(x<0)
             return false;
         vector<int> v;
-        int num_sum = 0;
-        while(x != 0){
+ Â  Â  Â  Â int num_sum = 0; //æ²¡å¿…è¦äº†ï¼Œç›´æ¥ç”¨vectorçš„sizeå°±å¯ä»¥
+	while(x != 0){
             v.push_back(x % 10);
             x /= 10;
             ++num_sum;
@@ -56,7 +56,7 @@ public:
     }
 };
 
-//´úÂë¶ş
+//ä»£ç äºŒ
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -68,7 +68,7 @@ public:
 		c = c * 10 + (temp % 10);
 		temp /= 10;
 	}
-	if(c == x)
+	if(c == x)//returnå¯ä»¥ç®€åŒ–
 		return true;
 	else
 		return false;
@@ -80,8 +80,8 @@ public:
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
