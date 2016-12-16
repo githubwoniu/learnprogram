@@ -3,10 +3,12 @@
 */
 class Solution {
 public:
-/*
+
+/* 
     本解法从后往前遍历字符串，如果rst初始为最后一个字符的值，如果前一个字符的值>=当前字符
     的值，则 rst += 前一个字符的值；否则，rst -= 前一个字符的值。
 */
+
     int romanToInt1(string s) {
     	int len=s.length();
         if (len == 0) return 0; 
@@ -31,10 +33,12 @@ public:
         }
         return rst;
     }
+    
 /*
     本解法从前往后遍历字符串，如果后一个字符的值>当前字符的值，则 rst -= 当前字符的值；
     否则，rst += 当前字符的值。
 */
+
     int romanToInt(string s) {
     	int len=s.length();
         if (len == 0) return 0; 
