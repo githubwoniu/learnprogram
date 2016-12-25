@@ -1,30 +1,25 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 
-## ÌâÄ¿
+## è§£é¢˜æ€è·¯
 
+1. éå†æ±‚å‡ºé“¾è¡¨é•¿åº¦
+2. æ‰¾å‡ºè¦åˆ é™¤çš„å…ƒç´ çš„å‰ä¸€ä¸ªä½ç½®
+3. åˆ é™¤å…ƒç´ 
 
+***æ³¨æ„***
 
-
-
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
+1. è¦åˆ é™¤å…ƒç´ ä¸ºç¬¬ä¸€ä¸ªä½ç½®æ—¶ï¼Œè¿”å›å€¼é—®é¢˜ã€‚
 
 
 
 
 
 
-## ´úÂë
+## ä»£ç 
 
 
 
@@ -32,17 +27,31 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 
 ```c++
-
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
-
-
+ListNode* removeNthFromEnd(ListNode* head, int n) {
+	ListNode *begin = head;
+	int len = 1;
+	while (begin->next != nullptr) {
+		len++;
+		begin = begin->next;
+	}
+	if (len == n)
+		return head->next;
+	int remove = len - n;
+	begin = head;
+	len = 1;
+	while (len < remove) {
+		begin = begin->next;
+		len++;
+	}
+	begin->next = begin->next->next;
+	return head;
+}
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
