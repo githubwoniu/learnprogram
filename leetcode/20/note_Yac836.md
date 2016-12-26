@@ -1,30 +1,17 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/valid-parentheses/
 
+## è§£é¢˜æ€è·¯
 
-## ÌâÄ¿
-
-
-
-
-
-## ÊÍÒå
+1. åˆ©ç”¨stack
+2. å¦‚æœæ ˆé¡¶å…ƒç´ å’Œå­—ç¬¦ä¸²ä¸­ä¸‹ä¸€ä¸ªå…ƒç´ ç›¸ç­‰ï¼Œåˆ™æ ˆé¡¶å…ƒç´ å‡ºæ ˆï¼Œå¦‚æœä¸èƒ½ï¼Œåˆ™ä¸‹ä¸€ä¸ªå…ƒç´ å…¥æ ˆã€‚
 
 
 
 
-
-
-## ²¹³äÃèÊö
-
-
-
-
-
-
-## ´úÂë
+## ä»£ç 
 
 
 
@@ -32,17 +19,55 @@ https://leetcode.com/problems/valid-parentheses/
 
 
 ```c++
-
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
+bool isValid(string s) {
+	if (s.empty())
+		return true;
+	auto len = s.size();
+	string::size_type index;
+	stack<char> cs;
+	cs.push(s[0]);
+	for (index = 1; index < len; index++) {
+		if (cs.empty())
+			if (s[index] != ')'&&s[index] != '}'&&s[index] != ']') {
+				cs.push(s[index]);
+				continue;
+			}
+			else {
+				return false;
+			}
+			char e = cs.top();
+			if (e == '(') {
+				if (s[index] == ')')
+					cs.pop();
+				else
+					cs.push(s[index]);
+			}
+			else if (e == '{') {
+				if (s[index] == '}')
+					cs.pop();
+				else
+					cs.push(s[index]);
+			}
+			else if (e == '[') {
+				if (s[index] == ']')
+					cs.pop();
+				else
+					cs.push(s[index]);
+			}
+	}
+	if (cs.empty())
+		return true;
+	else
+		return false;
+}
 
 
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
