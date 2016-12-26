@@ -1,30 +1,14 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-
-## ÌâÄ¿
-
+##è§£é¢˜æ€è·¯
 
 
 
 
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
-
-
-
-
-
-
-## ´úÂë
+## ä»£ç 
 
 
 
@@ -33,7 +17,7 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 ```c++
 
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
+//ä»£ç æ”¾åœ¨è¿™ä¸ªå—é‡Œé¢ï¼Œå¯ä»¥é«˜äº®å…³é”®å­—
 
 
 
@@ -41,8 +25,8 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
