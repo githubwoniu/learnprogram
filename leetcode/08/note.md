@@ -1,30 +1,30 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/string-to-integer-atoi/
 
 
-## ÌâÄ¿
+## é¢˜ç›®
 
 
 
 
 
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
+## é‡Šä¹‰
 
 
 
 
 
 
-## ´úÂë
+## è¡¥å……æè¿°
+
+
+
+
+
+
+## ä»£ç 
 
 
 
@@ -33,16 +33,32 @@ https://leetcode.com/problems/string-to-integer-atoi/
 
 ```c++
 
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
+//ä»£ç æ”¾åœ¨è¿™ä¸ªå—é‡Œé¢ï¼Œå¯ä»¥é«˜äº®å…³é”®å­—
+class Solution {
+public:
+    int myAtoi(string s) {
+        int i = 0, sign, MAX = 0;
+        long long val = 0;
+        for (i = 0; isspace(s[i]); i++); //remove spaces from left
+        sign = (s[i] == '-' ? -1 : 1);
+        if (s[i] == '+' || s[i] == '-')
+            i++;
+        for (val = 0; isdigit(s[i]); i++){
+            val = 10 * val + (s[i] - '0');
+            if (val > INT_MAX)
+                return (sign == 1 ? INT_MAX : INT_MIN);
+        }
+        return val * sign;
+    }
+};
 
 
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
