@@ -1,30 +1,24 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/remove-element/
 
 
-## ÌâÄ¿
+## è§£é¢˜æ€è·¯
 
+1. å®šä¹‰ä¸€ä¸ªè®¡æ•°å™¨ï¼Œä½œç”¨æœ‰äºŒ
 
-
-
-
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
++ è®°å½•æœ‰å‡ ä¸ªç›®æ ‡å€¼
++ å°†ä¸åŒä¸ç›®æ ‡å€¼çš„æ•°å­—ï¼Œç§»åŠ¨åˆ°æ•°ç»„å‰é¢
 
 
 
 
 
 
-## ´úÂë
+
+
+## ä»£ç 
 
 
 
@@ -32,17 +26,22 @@ https://leetcode.com/problems/remove-element/
 
 
 ```c++
-
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
-
-
+int removeElement(vector<int>& nums, int val) {
+	vector<int>::size_type i = 0, j = 0;
+	for (;i != nums.size();i++) {
+		if (nums[i] == val)
+			continue;
+		nums[j] = nums[i];
+		j++;
+	}
+	return j;
+}
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
