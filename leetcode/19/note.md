@@ -1,30 +1,30 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 
-## ÌâÄ¿
+## é¢˜ç›®
 
 
 
 
 
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
+## é‡Šä¹‰
 
 
 
 
 
 
-## ´úÂë
+## è¡¥å……æè¿°
+
+
+
+
+
+
+## ä»£ç 
 
 
 
@@ -33,16 +33,31 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 ```c++
 
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
+//ä»£ç æ”¾åœ¨è¿™ä¸ªå—é‡Œé¢ï¼Œå¯ä»¥é«˜äº®å…³é”®å­—
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode *fp = head, *sp = head; //use two pointers
+        for (int i = 0; i < n; i++)
+            fp = fp -> next;
+        if (fp == NULL)
+            return head -> next;
+        while (fp -> next != NULL){
+            fp = fp -> next;
+            sp = sp -> next;
+        }
+        sp -> next = sp -> next -> next;
+        return head;
+    }
+};
 
 
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
