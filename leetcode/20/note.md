@@ -1,30 +1,30 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/valid-parentheses/
 
 
-## ÌâÄ¿
+## é¢˜ç›®
 
 
 
 
 
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
+## é‡Šä¹‰
 
 
 
 
 
 
-## ´úÂë
+## è¡¥å……æè¿°
+
+
+
+
+
+
+## ä»£ç 
 
 
 
@@ -33,16 +33,24 @@ https://leetcode.com/problems/valid-parentheses/
 
 ```c++
 
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
+//ä»£ç æ”¾åœ¨è¿™ä¸ªå—é‡Œé¢ï¼Œå¯ä»¥é«˜äº®å…³é”®å­—
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> p;
+        for (char& c : s)
+            p.empty() ? p.push(c) : (c == p.top() + 2 || c == p.top() + 1 ? p.pop() : p.push(c));
+        return p.empty();
+    }
+};
 
 
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
