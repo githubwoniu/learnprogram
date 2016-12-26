@@ -1,30 +1,19 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/merge-two-sorted-lists/
 
 
-## ÌâÄ¿
+## è§£é¢˜æ€è·¯
+
+1. å…ˆæ–°å»ºä¸€ä¸ªèŠ‚ç‚¹tresï¼ŒæŒ‡å‘ä¸¤ä¸ªé“¾è¡¨ä¸­æœ€å°çš„ã€‚
+2. å†æ–°å»ºä¸€ä¸ªèŠ‚ç‚¹resï¼Œä½¿å®ƒæŒ‡å‘tres,ç”¨äºä¿å­˜ç»“æœã€‚
+3. ç„¶åä¸€æ¬¡æ¯”è¾ƒä¸¤ä¸ªé“¾è¡¨ä¸­çš„å…ƒç´ ï¼Œä½¿tresæŒ‡å‘å…¶ä¸­è¾ƒå°å…ƒç´ ï¼Œç„¶ååç§»tresï¼Œä½¿å®ƒæŒ‡å‘å®ƒçš„ä¸‹ä¸€ä¸ª
 
 
 
 
-
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
-
-
-
-
-
-
-## ´úÂë
+## ä»£ç 
 
 
 
@@ -32,17 +21,48 @@ https://leetcode.com/problems/merge-two-sorted-lists/
 
 
 ```c++
-
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+	if (!l1 && !l2)
+		return  nullptr;
+	if (!l1)
+		return l2;
+	if (!l2)
+		return l1;
+	ListNode* tres;
+	if (l1->val < l2->val) {
+		tres = l1;
+		l1 = l1->next;
+	}
+	else {
+		tres = l2;
+		l2 = l2->next;
+	}
+	ListNode* res = tres;
+	while (l1&&l2) {
+		if (l1->val < l2->val) {
+			tres->next = l1;
+			l1 = l1->next;
+		}
+		else {
+			tres->next = l2;
+			l2 = l2->next;
+		}
+		tres = tres->next;
+	}
+	if (l1)
+		tres->next = l1;
+	if (l2)
+		tres->next = l2;
+	return res;
+}
 
 
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
