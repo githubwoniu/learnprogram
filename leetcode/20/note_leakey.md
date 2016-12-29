@@ -1,7 +1,7 @@
 ## 链接
 
 
-https://leetcode.com/problems/roman-to-integer/
+https://leetcode.com/problems/valid-parentheses/
 
 
 ## 题目
@@ -34,7 +34,15 @@ https://leetcode.com/problems/roman-to-integer/
 ```c++
 
 //代码放在这个块里面，可以高亮关键字
-
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> p;
+        for (char& c : s)
+            p.empty() ? p.push(c) : (c == p.top() + 2 || c == p.top() + 1 ? p.pop() : p.push(c));
+        return p.empty();
+    }
+};
 
 
 ```
