@@ -1,30 +1,17 @@
-## Á´½Ó
+## é“¾æ¥
 
 
 https://leetcode.com/problems/swap-nodes-in-pairs/
 
 
-## ÌâÄ¿
+## è§£é¢˜æ€è·¯
+
+1. æ‰¾åˆ°è¦äº¤æ¢çš„å‰é©±å°±è¡Œã€‚
 
 
 
 
-
-## ÊÍÒå
-
-
-
-
-
-
-## ²¹³äÃèÊö
-
-
-
-
-
-
-## ´úÂë
+## ä»£ç 
 
 
 
@@ -32,17 +19,31 @@ https://leetcode.com/problems/swap-nodes-in-pairs/
 
 
 ```c++
-
-//´úÂë·ÅÔÚÕâ¸ö¿éÀïÃæ£¬¿ÉÒÔ¸ßÁÁ¹Ø¼ü×Ö
-
-
-
+//å€Ÿé‰´åˆ«äººçš„ä»£ç 
+ListNode* swapPairs(ListNode* head) {
+	if (!head  || !head->next) return head;
+	ListNode tempNode(0);
+	ListNode *helper = &tempNode;
+	ListNode *ret = head;
+	ListNode *cur = helper;
+	while (ret  && ret->next) {
+		ListNode *next = ret->next->next;
+		cur->next = ret->next;
+		cur = cur->next;
+		cur->next = ret;
+		cur = cur->next;
+		cur->next = nullptr;
+		ret = next;
+	}
+	if (ret) cur->next = ret;
+	return helper->next;
+}
 ```
 
 
 
-## ¸ü¶à
+## æ›´å¤š
 
 ![](https://github.com/githubwoniu/learnprogram/blob/master/image/erweima.png)
 
-PS: Çë±£Áô¶şÎ¬ÂëÁ´½Ó£¬ÒÔ±ã¸ü¶àÈË²ÎÓë½øÀ´¡£Ğ»Ğ»¡£
+PS: è¯·ä¿ç•™äºŒç»´ç é“¾æ¥ï¼Œä»¥ä¾¿æ›´å¤šäººå‚ä¸è¿›æ¥ã€‚è°¢è°¢ã€‚
