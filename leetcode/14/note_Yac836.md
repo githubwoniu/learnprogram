@@ -48,7 +48,10 @@ string longestCommonPrefix(vector<string>& strs) {
 
 ```
 
+## mzf评审
 
+1. 缓存的东西有点多了，跑下来是多少ms？
+2. flag没必要，看下我的提交，或者discuss
 
 ## 更多
 
