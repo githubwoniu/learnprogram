@@ -1,14 +1,7 @@
 #描述
 ##解题思路
-###一般来说，使用unordered_map，并将数组元素及元素对应的索引分别作为key，value，可以有效减小运行时间，但是存在两个疑问。
-* 初始unordered_map为空，一边查询一边将不符合要求的数组元素和索引插入unordered_map中，因此，a=nums[i]时，b只能在num[0]~nums[i-1]中查找，这也导致
-程序在第一次循环(i=1)时，永远不会输出结果，例如：
-
-  ```
-  input: nums=[1,3,5,7],target=4
-  ```
-* 假如数组中，存在相同的元素，怎么办？
-
+###为了保证第一次查找有效，采用先插再查。之前提到数组里可能会有重复元素，bajdcc提示使用multimap，运行结果显示，两者结果相同。只要这个重复元素符合条件，返回的始终是第一次出现时对应的索引。
+###此外，例如```nums=[1,3,5,7,9],target=14```，如果不加判断，返回结果就会是```[3,3]```,而不是```[3,4]```。如果采用先查再插，这种情形不用考虑。
 #代码
 ```cpp
 class Solution {
@@ -17,14 +10,17 @@ public:
     	unordered_map<int, int> unmap;
     	vector<int> result;
     	for (int i = 0; i < nums.size(); ++i) {
-    		int x = target - nums[i];
-    		auto search = unmap.find(x);
-    		if (search != unmap.end()) {
-    			result.push_back(search->second);
-          result.push_back(i);
-    			return result;
-    		}
-    		unmap.insert({nums[i],i});
+    		//int x = target - nums[i];
+        unmap.insert({nums[i],i});
+    		auto search = unmap.find(target - nums[i]);
+		    if (search != unmap.end()) {
+		        if (i != search->second){
+		          result.push_back(i);
+    			    result.push_back(search->second);
+    			    return result;
+		        }
+		    }
+		    //unmap.insert({nums[i],i});
     	}
     	return result;
     }
