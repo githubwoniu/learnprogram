@@ -242,19 +242,16 @@ public:
                         if (i > 0 && dp[i - 1][j])
                             // '.*' matches 'abc' => '.*' == 'ab'
                             dp[i][j] = true;
-                        if (!dp[i][j]) // else
-                            // 'a.*' matches 'ab' => 'a.*' == 'a'
-                            dp[i][j] = dp[i][j - 2];;
                     }
                     else
                     {
                         if (i > 0 && dp[i - 1][j])
                             // 'a*' matches 'aa' => 'a*' == 'a' && 'a' == 'a'
                             dp[i][j] = s[i - 1] == p[j - 2];
-                        if (!dp[i][j]) // else
-                            // 'ab*' matches 'a' => 'a' == 'a'
-                            dp[i][j] = dp[i][j - 2];;
                     }
+                    if (!dp[i][j]) // retry
+                        // 'a.*' matches 'a' => 'a' == 'a'
+                        dp[i][j] = dp[i][j - 2];;
                 }
                 else
                 {
